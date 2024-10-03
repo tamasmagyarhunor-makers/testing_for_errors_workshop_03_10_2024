@@ -3,4 +3,7 @@ class Train():
         self.colour = ''
 
     def set_colour(self, colour):
-        self.colour = colour
+        if type(colour) is str:
+           self.colour = colour
+        else:
+            raise Exception(f"{colour} is not a String. Colour should be a string")
